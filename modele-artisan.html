@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menuiserie Durand | Artisan Qualifié</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-orange-600 underline">Menuiserie Durand</h1>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#services" class="hover:text-orange-600 transition">Services</a>
+                <a href="#projets" class="hover:text-orange-600 transition">Réalisations</a>
+                <a href="#contact" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700">Devis
+                    Gratuit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-900 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <span class="text-orange-500 font-bold uppercase tracking-widest text-sm">Artisan local depuis 15
+                    ans</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mt-4 leading-tight">L'art du bois au service de votre
+                    maison</h2>
+                <p class="mt-6 text-gray-300 text-lg">Conception sur mesure, pose de parquets et rénovation d'escaliers.
+                    Qualité garantie et respect des délais.</p>
+                <div class="mt-8 flex space-x-4">
+                    <a href="#contact"
+                        class="bg-orange-600 px-6 py-3 rounded-md font-bold hover:bg-orange-700 transition">Demander un
+                        devis</a>
+                    <a href="#projets"
+                        class="border border-white px-6 py-3 rounded-md font-bold hover:bg-white hover:text-gray-900 transition">Nos
+                        travaux</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 px-4">
+                <img src="https://images.unsplash.com/photo-1581447100595-3a813559786a?auto=format&fit=crop&w=800&q=80"
+                    alt="Atelier bois" class="rounded-xl shadow-2xl border-4 border-orange-600">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 max-w-6xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-12">Nos Prestations</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-600">
+                <i class="fas fa-hammer text-4xl text-orange-600 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Menuiserie Intérieure</h4>
+                <p class="text-gray-600">Portes, placards, dressings et agencements sur mesure pour optimiser vos
+                    espaces.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-600">
+                <i class="fas fa-home text-4xl text-orange-600 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Parquets & Sols</h4>
+                <p class="text-gray-600">Pose de parquets massifs, stratifiés et rénovation (ponçage, vitrification).
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-600">
+                <i class="fas fa-tools text-4xl text-orange-600 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Rénovation</h4>
+                <p class="text-gray-600">Restauration de meubles anciens et remise à neuf d'éléments de charpente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Galerie -->
+    <section id="projets" class="py-16 bg-gray-100 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-8 text-center">Nos Dernières Réalisations</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&w=500"
+                    class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=500"
+                    class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1541604193435-22287d32c2c2?auto=format&fit=crop&w=500"
+                    class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-4xl mx-auto px-4">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+            <div class="bg-orange-600 text-white p-10 md:w-1/3">
+                <h3 class="text-2xl font-bold mb-6">Contact</h3>
+                <p class="mb-4"><i class="fas fa-phone mr-3"></i> 06 XX XX XX XX</p>
+                <p class="mb-4"><i class="fas fa-envelope mr-3"></i> contact@XXXXXXX</p>
+                <p><i class="fas fa-map-marker-alt mr-3"></i> Paris & Île-de-France</p>
+                <div class="mt-10 flex space-x-4">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                    <i class="fab fa-instagram text-xl"></i>
+                </div>
+            </div>
+            <form class="p-10 md:w-2/3 space-y-4">
+                <input type="text" placeholder="Votre nom"
+                    class="w-full p-3 border rounded-lg focus:outline-orange-600">
+                <input type="email" placeholder="Votre email"
+                    class="w-full p-3 border rounded-lg focus:outline-orange-600">
+                <textarea placeholder="Décrivez votre projet..." rows="4"
+                    class="w-full p-3 border rounded-lg focus:outline-orange-600"></textarea>
+                <button type="submit"
+                    class="w-full bg-orange-600 text-white py-3 rounded-lg font-bold hover:bg-orange-700 transition">Envoyer
+                    ma demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-500 py-10 text-center">
+        <p>&copy; 2024 Menuiserie Durand - Réalisé par Bonkano Création</p>
+    </footer>
+
+</body>
+
+</html>
