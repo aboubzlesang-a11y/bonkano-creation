@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Instant Zen | Institut de Beauté & Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .bg-nude {
+            background-color: #fdf8f5;
+        }
+
+        .text-gold {
+            color: #c5a059;
+        }
+
+        .btn-gold {
+            background-color: #c5a059;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <nav
+        class="fixed w-full z-50 bg-white/80 backdrop-blur-md px-8 py-5 flex justify-between items-center border-b border-pink-50">
+        <div class="text-2xl tracking-widest uppercase font-light">L'Instant <span
+                class="text-gold font-semibold">Zen</span></div>
+        <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-medium">
+            <a href="#soins" class="hover:text-gold transition">Nos Soins</a>
+            <a href="#tarifs" class="hover:text-gold transition">Tarifs</a>
+            <a href="#contact" class="btn-gold px-6 py-2 rounded-full shadow-md hover:opacity-90 transition">Prendre
+                RDV</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecee?auto=format&fit=crop&w=1920&q=80"
+            class="absolute inset-0 w-full h-full object-cover" alt="Massage spa">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-6xl md:text-8xl mb-4 italic">Sublimez votre beauté</h1>
+            <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-8">Un sanctuaire dédié à votre
+                bien-être</p>
+            <a href="#soins"
+                class="border border-white px-10 py-4 uppercase text-xs tracking-[0.3em] hover:bg-white hover:text-black transition">Découvrir
+                l'univers</a>
+        </div>
+    </section>
+
+    <section id="soins" class="py-24 px-6 bg-nude">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl mb-12">Nos Soins Signature</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 rounded-t-full aspect-[2/3]">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Soin visage">
+                    </div>
+                    <h3 class="text-2xl mb-2">Soins du Visage</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Hydratation profonde et éclat naturel
+                        pour une peau revitalisée.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 rounded-t-full aspect-[2/3]">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ae6ce6ca67d?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Massage">
+                    </div>
+                    <h3 class="text-2xl mb-2">Massages du Corps</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Une parenthèse de douceur pour libérer
+                        les tensions musculaires.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 rounded-t-full aspect-[2/3]">
+                        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Manucure">
+                    </div>
+                    <h3 class="text-2xl mb-2">Beauté des Mains</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Soin complet des ongles et pose de
+                        vernis semi-permanent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs" class="py-24 px-6 max-w-4xl mx-auto">
+        <h2 class="text-4xl text-center mb-16 italic">Tarifs des Soins</h2>
+        <div class="space-y-8">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4">
+                <span>Massage Californien (60 min)</span>
+                <span class="text-gold font-semibold">75€</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4">
+                <span>Soin Visage Éclat (45 min)</span>
+                <span class="text-gold font-semibold">55€</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4">
+                <span>Pose Vernis Semi-Permanent</span>
+                <span class="text-gold font-semibold">35€</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16 px-6 text-center">
+        <div class="text-2xl tracking-widest uppercase font-light mb-6">L'Instant <span class="text-gold">Zen</span>
+        </div>
+        <p class="text-xs tracking-widest uppercase mb-4">Lundi — Samedi : 09h00 - 19h00</p>
+        <p class="text-gray-500 text-sm italic">Créé avec passion par Bonkano Création</p>
+    </footer>
+
+</body>
+
+</html>
