@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Durand | Conseil & Expertise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;600&display=swap');
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Lora', serif;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .bg-navy {
+            background-color: #0f172a;
+        }
+
+        .text-accent {
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fcfcfd] text-slate-800">
+
+    <nav class="fixed w-full z-50 bg-white border-b border-slate-100 px-8 py-6 flex justify-between items-center">
+        <div class="text-xl tracking-[0.2em] font-semibold uppercase text-slate-900">Cabinet <span
+                class="font-light text-slate-500">Durand</span></div>
+        <div class="hidden md:flex space-x-12 text-xs uppercase tracking-widest font-medium">
+            <a href="#expertises" class="hover:text-slate-500 transition">Expertises</a>
+            <a href="#cabinet" class="hover:text-slate-500 transition">Le Cabinet</a>
+            <a href="#contact"
+                class="border border-slate-900 px-6 py-2 hover:bg-slate-900 hover:text-white transition">Prendre
+                rendez-vous</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-40 pb-24 px-8 bg-slate-50">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1">
+                <h1 class="text-5xl md:text-6xl mb-8 leading-tight text-slate-900">Une expertise juridique à votre
+                    service.</h1>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">Nous accompagnons les particuliers et
+                    les entreprises dans leurs démarches complexes avec rigueur et transparence.</p>
+                <div class="flex gap-6">
+                    <a href="#contact"
+                        class="bg-slate-900 text-white px-8 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-slate-700 transition">Consulter
+                        le cabinet</a>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div class="absolute -inset-4 border border-slate-200 translate-x-4 translate-y-4"></div>
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80"
+                    class="relative z-10 w-full h-[500px] object-cover shadow-2xl" alt="Bureau professionnel">
+            </div>
+        </div>
+    </header>
+
+    <section id="expertises" class="py-24 px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <div>
+                <span class="text-slate-400 uppercase tracking-widest text-sm mb-2 block">Nos domaines</span>
+                <h2 class="text-4xl italic">Domaines d'intervention</h2>
+            </div>
+            <div class="h-[1px] flex-1 bg-slate-100 mx-10 mb-4 hidden md:block"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="group">
+                <div
+                    class="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition duration-500">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Droit des Affaires</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Conseil stratégique pour la création, la fusion et la
+                    gestion juridique de votre entreprise.</p>
+            </div>
+            <div class="group">
+                <div
+                    class="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition duration-500">
+                    <i class="fa-solid fa-house-shield"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Droit Immobilier</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Accompagnement dans vos transactions, baux commerciaux
+                    et litiges de copropriété.</p>
+            </div>
+            <div class="group">
+                <div
+                    class="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition duration-500">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Droit de la Famille</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Médiation et défense de vos intérêts dans le cadre de
+                    successions ou divorces.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-navy text-white text-center px-8">
+        <div class="max-w-3xl mx-auto">
+            <i class="fa-solid fa-quote-left text-3xl text-slate-500 mb-8"></i>
+            <h2 class="text-3xl md:text-4xl italic leading-snug mb-8">"L'éthique et la clarté sont les fondements de
+                notre relation client."</h2>
+            <p class="uppercase tracking-widest text-xs text-slate-400">Maître Jean Durand — Fondateur</p>
+        </div>
+    </section>
+
+    <footer class="py-20 px-8 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="text-lg font-bold mb-6">Cabinet Durand</div>
+                <p class="text-slate-500 text-sm">Inscrit au Barreau de Paris.<br>Conseil et défense depuis 1998.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest">Coordonnées</h4>
+                <p class="text-slate-500 text-sm mb-2">42 Avenue des Experts, 75008 Paris</p>
+                <p class="text-slate-500 text-sm">contact@XXXXXX-durand.fr</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest">Suivez-nous</h4>
+                <div class="flex gap-4 text-slate-400">
+                    <a href="#" class="hover:text-slate-900"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-slate-900"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-slate-50 text-center text-xs text-slate-400 italic">
+            Réalisé par Bonkano Création — Tous droits réservés.
+        </div>
+    </footer>
+
+</body>
+
+</html>
