@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Assiette d'Or | Restaurant Gastronomique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500&display=swap');
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fdfcf8] text-gray-900">
+
+    <nav
+        class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-orange-100 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-orange-800">L'Assiette d'Or</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#carte" class="hover:text-orange-600 transition">La Carte</a>
+            <a href="#reserver"
+                class="bg-orange-800 text-white px-5 py-2 rounded-full hover:bg-orange-900 transition">Réserver une
+                table</a>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80"
+            class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Plat gastronomique">
+        <div class="relative z-10 px-4">
+            <span class="uppercase tracking-[0.3em] text-sm mb-4 block">Cuisine d'exception</span>
+            <h1 class="text-5xl md:text-7xl mb-6 italic">Une expérience culinaire <br> inoubliable</h1>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#carte"
+                    class="bg-white text-orange-900 px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition">Découvrir
+                    la carte</a>
+                <a href="#reserver"
+                    class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-orange-900 transition">Réserver
+                    maintenant</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="carte" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-orange-900 mb-4">Notre Carte du Moment</h2>
+            <div class="w-24 h-1 bg-orange-200 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl border-b border-orange-100 pb-2 mb-6">Entrées</h3>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h4 class="font-bold">Velouté de Potiron à la Truffe</h4>
+                            <p class="text-sm text-gray-500 italic">Graines de courge toastées et crème fumée</p>
+                        </div>
+                        <span class="font-bold text-orange-800">14€</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h4 class="font-bold">Tartare de Saumon & Avocat</h4>
+                            <p class="text-sm text-gray-500 italic">Zestes de citron vert et aneth fraîche</p>
+                        </div>
+                        <span class="font-bold text-orange-800">16€</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl border-b border-orange-100 pb-2 mb-6">Plats</h3>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h4 class="font-bold">Filet de Bœuf Rossini</h4>
+                            <p class="text-sm text-gray-500 italic">Foie gras poêlé, jus corsé et purée maison</p>
+                        </div>
+                        <span class="font-bold text-orange-800">32€</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h4 class="font-bold">Risotto aux Noix de St-Jacques</h4>
+                            <p class="text-sm text-gray-500 italic">Émulsion au safran et parmesan 24 mois</p>
+                        </div>
+                        <span class="font-bold text-orange-800">28€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserver" class="bg-orange-50 py-20 px-6">
+        <div class="max-w-3xl mx-auto bg-white p-10 rounded-2xl shadow-xl">
+            <h2 class="text-3xl text-center text-orange-900 mb-8 font-bold">Réserver une table</h2>
+            <form class="grid md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Nom complet"
+                    class="p-3 border border-orange-100 rounded-lg focus:outline-orange-800">
+                <input type="email" placeholder="Email"
+                    class="p-3 border border-orange-100 rounded-lg focus:outline-orange-800">
+                <input type="date" class="p-3 border border-orange-100 rounded-lg focus:outline-orange-800">
+                <select class="p-3 border border-orange-100 rounded-lg focus:outline-orange-800">
+                    <option>2 Personnes</option>
+                    <option>3 Personnes</option>
+                    <option>4 Personnes</option>
+                    <option>Plus de 4</option>
+                </select>
+                <button type="submit"
+                    class="md:col-span-2 bg-orange-800 text-white font-bold py-4 rounded-lg hover:bg-orange-900 transition uppercase tracking-widest">Confirmer
+                    la demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-500 bg-white border-t border-orange-50">
+        <div class="mb-4 text-orange-900 font-bold">L'Assiette d'Or</div>
+        <p class="text-sm">12 Rue de la Gastronomie, 75001 Paris</p>
+        <p class="text-sm mt-4 italic">Réalisé par Bonkano Création</p>
+    </footer>
+
+</body>
+
+</html>
