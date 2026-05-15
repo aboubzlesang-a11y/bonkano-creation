@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatiPro | Construction & Rénovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;600&display=swap');
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Barlow', sans-serif;
+            text-transform: uppercase;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bg-chantier {
+            background-color: #fbbf24;
+        }
+
+        /* Jaune sécurité */
+        .text-dark {
+            color: #1e293b;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-dark">
+
+    <nav class="fixed w-full z-50 bg-slate-900 text-white px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-tighter italic">BATI<span class="text-amber-400">PRO</span></div>
+        <div class="hidden md:flex space-x-8 font-bold text-xs">
+            <a href="#services" class="hover:text-amber-400 transition">Services</a>
+            <a href="#projets" class="hover:text-amber-400 transition">Nos Réalisations</a>
+            <a href="#devis" class="bg-amber-400 text-slate-900 px-5 py-2 rounded-sm hover:bg-white transition">Demander
+                un devis</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[90vh] flex items-center justify-start overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+            class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Chantier construction">
+        <div class="relative z-10 px-8 md:px-20 max-w-4xl text-white">
+            <div class="w-20 h-2 bg-amber-400 mb-6"></div>
+            <h1 class="text-5xl md:text-7xl font-black leading-none mb-6">Nous construisons <br> votre avenir.</h1>
+            <p class="text-lg md:text-xl mb-8 text-slate-200">Gros œuvre, rénovation énergétique et maçonnerie générale.
+                Qualité certifiée et respect des délais.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#devis"
+                    class="bg-amber-400 text-slate-900 px-10 py-4 font-black hover:bg-white transition">Démarrer un
+                    projet</a>
+                <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-4 border-l-4 border-amber-400">
+                    <span class="text-amber-400 font-bold">Garantie Décennale</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-20 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-1">
+            <div class="bg-white p-10 border-b-4 border-slate-200 hover:border-amber-400 transition shadow-sm">
+                <i class="fa-solid fa-trowel-bricks text-4xl text-amber-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Maçonnerie</h3>
+                <p class="text-slate-600 text-sm">Construction de murs, fondations et dalles béton pour tous types de
+                    bâtiments.</p>
+            </div>
+            <div class="bg-white p-10 border-b-4 border-slate-200 hover:border-amber-400 transition shadow-sm">
+                <i class="fa-solid fa-house-chimney-crack text-4xl text-amber-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Rénovation</h3>
+                <p class="text-slate-600 text-sm">Réhabilitation complète d'appartements et maisons anciennes avec mise
+                    aux normes.</p>
+            </div>
+            <div class="bg-white p-10 border-b-4 border-slate-200 hover:border-amber-400 transition shadow-sm">
+                <i class="fa-solid fa-helmet-safety text-4xl text-amber-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Génie Civil</h3>
+                <p class="text-slate-600 text-sm">Aménagements extérieurs, voiries et structures complexes pour
+                    professionnels.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black">Nos derniers chantiers</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 px-2">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80"
+                class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500" alt="Chantier 1">
+            <img src="https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&w=600&q=80"
+                class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500" alt="Chantier 2">
+            <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80"
+                class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500" alt="Chantier 3">
+            <img src="https://images.unsplash.com/photo-1517089596392-db9a5e9428b6?auto=format&fit=crop&w=600&q=80"
+                class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500" alt="Chantier 4">
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 px-6 border-t-8 border-amber-400">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+            <div>
+                <div class="text-2xl font-black italic mb-4">BATI<span class="text-amber-400">PRO</span></div>
+                <p class="text-slate-400 text-sm max-w-xs">Expertise et savoir-faire depuis 15 ans au service de vos
+                    projets de construction.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-amber-400">Contact</h4>
+                <p class="text-sm">01 XX XX XX XX</p>
+                <p class="text-sm">contact@XXXXXX</p>
+            </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            © 2026 BatiPro Construction — Partenaire Bonkano Création
+        </div>
+    </footer>
+
+</body>
+
+</html>
