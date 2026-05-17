@@ -1709,6 +1709,7 @@
             transform: translateY(0)
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -2206,61 +2207,49 @@
         <div style="text-align:center" class="fade-in">
             <div class="section-eyebrow">Avis clients</div>
             <h2 class="section-title">Ce que disent<br />nos clients</h2>
-            <p class="section-sub" style="margin:0 auto">Des vrais retours, de vraies personnes.</p>
+            <p class="section-sub" style="margin:0 auto 3rem">Vrais retours de vrais clients.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem" class="fade-in">
-
-            <div
-                style="background:white;border:1px solid var(--bordure);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem">
-                <div style="color:var(--or);font-size:1rem;letter-spacing:2px">★★★★★</div>
-                <p style="font-size:.88rem;color:var(--gris);line-height:1.7;font-style:italic;flex:1">« Site livré en
-                    moins d'une semaine, exactement ce que je voulais. Mes clients me contactent maintenant directement
-                    via le formulaire. »</p>
-                <div style="display:flex;align-items:center;gap:.7rem;margin-top:.4rem">
-                    <div
-                        style="width:38px;height:38px;border-radius:50%;background:#fdf4e8;color:var(--or);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">
-                        PM</div>
-                    <div>
-                        <div style="font-size:.85rem;font-weight:700">Pierre M.</div>
-                        <div style="font-size:.75rem;color:var(--gris)">Plombier — Île-de-France</div>
-                    </div>
+        <div id="avisGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:3rem"
+            class="fade-in"></div>
+        <div style="max-width:600px;margin:0 auto;background:white;border:1px solid var(--bordure);border-radius:16px;padding:2rem"
+            class="fade-in">
+            <h3 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1.2rem">Laisser un
+                avis</h3>
+            <p style="font-size:.8rem;font-weight:600;color:var(--noir);margin-bottom:.4rem">Votre note *</p>
+            <div id="starPicker" style="display:flex;gap:.4rem;margin-bottom:1rem">
+                <button data-v="1" onclick="setStars(1)"
+                    style="font-size:1.8rem;cursor:pointer;color:#ddd;background:none;border:none;padding:0">★</button>
+                <button data-v="2" onclick="setStars(2)"
+                    style="font-size:1.8rem;cursor:pointer;color:#ddd;background:none;border:none;padding:0">★</button>
+                <button data-v="3" onclick="setStars(3)"
+                    style="font-size:1.8rem;cursor:pointer;color:#ddd;background:none;border:none;padding:0">★</button>
+                <button data-v="4" onclick="setStars(4)"
+                    style="font-size:1.8rem;cursor:pointer;color:#ddd;background:none;border:none;padding:0">★</button>
+                <button data-v="5" onclick="setStars(5)"
+                    style="font-size:1.8rem;cursor:pointer;color:#ddd;background:none;border:none;padding:0">★</button>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem">
+                <div style="display:flex;flex-direction:column;gap:.3rem">
+                    <label style="font-size:.8rem;font-weight:600">Prénom *</label>
+                    <input id="avisPrenom" type="text" placeholder="Pierre" maxlength="30"
+                        style="background:var(--creme);border:1.5px solid var(--bordure);border-radius:10px;padding:.6rem .9rem;font-family:'DM Sans',sans-serif;font-size:.88rem;width:100%" />
+                </div>
+                <div style="display:flex;flex-direction:column;gap:.3rem">
+                    <label style="font-size:.8rem;font-weight:600">Métier</label>
+                    <input id="avisMetier" type="text" placeholder="Plombier — Paris" maxlength="40"
+                        style="background:var(--creme);border:1.5px solid var(--bordure);border-radius:10px;padding:.6rem .9rem;font-family:'DM Sans',sans-serif;font-size:.88rem;width:100%" />
                 </div>
             </div>
-
-            <div
-                style="background:white;border:1px solid var(--bordure);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem">
-                <div style="color:var(--or);font-size:1rem;letter-spacing:2px">★★★★★</div>
-                <p style="font-size:.88rem;color:var(--gris);line-height:1.7;font-style:italic;flex:1">« Très
-                    professionnel pour leur âge ! Le design est moderne et le site se charge très vite. Je recommande
-                    sans hésiter. »</p>
-                <div style="display:flex;align-items:center;gap:.7rem;margin-top:.4rem">
-                    <div
-                        style="width:38px;height:38px;border-radius:50%;background:#f0fdf4;color:var(--vert);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">
-                        SL</div>
-                    <div>
-                        <div style="font-size:.85rem;font-weight:700">Sophie L.</div>
-                        <div style="font-size:.75rem;color:var(--gris)">Esthéticienne — Lyon</div>
-                    </div>
-                </div>
+            <div style="display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem">
+                <label style="font-size:.8rem;font-weight:600">Votre avis *</label>
+                <textarea id="avisTexte" placeholder="Dites-nous ce que vous avez pensé..." maxlength="300"
+                    style="background:var(--creme);border:1.5px solid var(--bordure);border-radius:10px;padding:.6rem .9rem;font-family:'DM Sans',sans-serif;font-size:.88rem;resize:vertical;min-height:80px;width:100%"></textarea>
             </div>
-
-            <div
-                style="background:white;border:1px solid var(--bordure);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem">
-                <div style="color:var(--or);font-size:1rem;letter-spacing:2px">★★★★★</div>
-                <p style="font-size:.88rem;color:var(--gris);line-height:1.7;font-style:italic;flex:1">« Rapport
-                    qualité/prix imbattable. Le contrat signé par le père m'a rassuré dès le départ. Site en ligne en 2
-                    semaines chrono. »</p>
-                <div style="display:flex;align-items:center;gap:.7rem;margin-top:.4rem">
-                    <div
-                        style="width:38px;height:38px;border-radius:50%;background:#f0f4ff;color:var(--bleu);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">
-                        KD</div>
-                    <div>
-                        <div style="font-size:.85rem;font-weight:700">Karim D.</div>
-                        <div style="font-size:.75rem;color:var(--gris)">Gérant de restaurant — Marseille</div>
-                    </div>
-                </div>
-            </div>
-
+            <button onclick="soumettreAvis()"
+                style="width:100%;padding:.85rem;background:var(--or);color:var(--noir);border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer">Envoyer
+                mon avis →</button>
+            <p style="font-size:.72rem;color:var(--gris);text-align:center;margin-top:.6rem">Les avis sont vérifiés
+                avant publication.</p>
         </div>
     </section>
 
@@ -2498,6 +2487,61 @@
                 }
             }).catch(() => alert('Erreur réseau. Veuillez réessayer.'));
         }
+
+        // ── SUPABASE AVIS ──
+        const _sb = supabase.createClient(
+            'https://dyfeiljdgitsuxeosvfj.supabase.co',
+            'sb_publishable_lAa7djeryKqbxYsmvxZ1nw_3KdYP...'
+        );
+        let noteAvis = 0;
+        const bgAv = ['#fdf4e8', '#f0fdf4', '#f0f4ff'];
+        const txtAv = ['#c9a84c', '#1a6b3a', '#1a3a6b'];
+        function initiales(n) { return n.trim().split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2); }
+
+        async function chargerAvis() {
+            const grid = document.getElementById('avisGrid');
+            if (!grid) return;
+            const { data } = await _sb.from('avis').select('*').eq('valide', true).order('created_at', { ascending: false });
+            if (!data || data.length === 0) {
+                grid.innerHTML = '<p style="text-align:center;color:var(--gris);grid-column:1/-1">Sois le premier à laisser un avis !</p>';
+                return;
+            }
+            grid.innerHTML = data.map((a, i) => `
+    <div style="background:white;border:1px solid var(--bordure);border-radius:14px;padding:1.4rem;display:flex;flex-direction:column;gap:.7rem">
+      <div style="color:var(--or);font-size:.95rem;letter-spacing:2px">${'★'.repeat(a.note)}${'☆'.repeat(5 - a.note)}</div>
+      <p style="font-size:.85rem;color:var(--gris);line-height:1.7;font-style:italic;flex:1">« ${a.texte} »</p>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <div style="width:34px;height:34px;border-radius:50%;background:${bgAv[i % 3]};color:${txtAv[i % 3]};display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0">${initiales(a.prenom)}</div>
+        <div>
+          <div style="font-size:.82rem;font-weight:700">${a.prenom}</div>
+          ${a.metier ? `<div style="font-size:.72rem;color:var(--gris)">${a.metier}</div>` : ''}
+        </div>
+      </div>
+    </div>`).join('');
+        }
+
+        function setStars(n) {
+            noteAvis = n;
+            document.querySelectorAll('#starPicker button').forEach(b => {
+                b.style.color = parseInt(b.dataset.v) <= n ? 'var(--or)' : '#ddd';
+            });
+        }
+
+        async function soumettreAvis() {
+            const prenom = document.getElementById('avisPrenom').value.trim();
+            const metier = document.getElementById('avisMetier').value.trim();
+            const texte = document.getElementById('avisTexte').value.trim();
+            if (!prenom || !texte || noteAvis === 0) { alert('Merci de remplir votre prénom, note et avis !'); return; }
+            await _sb.from('avis').insert([{ prenom, metier, texte, note: noteAvis, valide: false }]);
+            document.querySelector('#avis .fade-in:last-child').innerHTML = `
+    <div style="text-align:center;padding:2rem">
+      <div style="font-size:3rem;margin-bottom:.8rem">🎉</div>
+      <h3 style="font-family:'Syne',sans-serif;margin-bottom:.5rem">Merci pour votre avis !</h3>
+      <p style="color:var(--gris)">Il sera publié après vérification.</p>
+    </div>`;
+        }
+
+        chargerAvis();
 
         // ── SCROLL ANIMATIONS ──
         const observer = new IntersectionObserver(entries => {
