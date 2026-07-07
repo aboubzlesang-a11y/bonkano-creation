@@ -1754,7 +1754,7 @@
             <h1>
                 Votre site<br />
                 <span class="line-or">vitrine</span><br />
-                <span class="line-outline">en 48h</span>
+                <span class="line-outline">en 7 jours</span>
             </h1>
             <p class="hero-desc">Bonkano Création conçoit des sites vitrines professionnels pour artisans, commerçants
                 et associations — livrés clé en main, responsive et optimisés.</p>
@@ -1764,8 +1764,8 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <div class="stat-number">48h</div>
-                    <div class="stat-label">Délai livraison</div>
+                    <div class="stat-number">7j</div>
+                    <div class="stat-label">Délai à partir de</div>
                 </div>
                 <div class="stat-sep"></div>
                 <div class="stat-item">
@@ -1779,8 +1779,8 @@
                 </div>
                 <div class="stat-sep"></div>
                 <div class="stat-item">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">Révisions</div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Révisions incluses</div>
                 </div>
             </div>
         </div>
@@ -1847,7 +1847,7 @@
             <div class="service-card fade-in">
                 <div class="service-icon" style="background:#ecfeff">🛡️</div>
                 <h3>Contrat sécurisé</h3>
-                <p>Tous les contrats sont signés par notre père, responsable légal de l'activité.</p>
+                <p>Tous les contrats sont signés par un responsable légal de l'activité.</p>
                 <span class="service-pill">Inclus partout</span>
             </div>
         </div>
@@ -1996,7 +1996,8 @@
                         <div class="step-num">2</div>
                         <div class="step-body">
                             <h3>On valide ensemble</h3>
-                            <p>On choisit le style, les couleurs, le contenu. Contrat signé par notre père.</p>
+                            <p>On choisit le style, les couleurs, le contenu. Contrat signé par un responsable légal.
+                            </p>
                         </div>
                     </div>
                     <div class="process-step">
@@ -2060,7 +2061,7 @@
         <div style="text-align:center" class="fade-in">
             <div class="section-eyebrow">Tarifs</div>
             <h2 class="section-title">Des prix clairs,<br />sans surprise</h2>
-            <p class="section-sub" style="margin:0 auto">Contrats signés par notre père, garant légal.</p>
+            <p class="section-sub" style="margin:0 auto">Contrats signés par un responsable légal.</p>
         </div>
         <div class="tarifs-grid">
             <div class="tarif-card fade-in">
@@ -2072,6 +2073,7 @@
                     <li>Responsive mobile</li>
                     <li>1 page (one-page)</li>
                     <li>Délai : 1 semaine</li>
+                    <li>2 révisions incluses</li>
                     <li>Support 7 jours</li>
                 </ul>
                 <button class="tarif-btn tarif-btn-clair" onclick="ouvrirModal('Basique — 149€')">Choisir Basique
@@ -2088,6 +2090,7 @@
                     <li>Formulaire de contact</li>
                     <li>Google Maps intégré</li>
                     <li>Délai : 2 semaines</li>
+                    <li>3 révisions incluses</li>
                     <li>Support 14 jours</li>
                 </ul>
                 <button class="tarif-btn tarif-btn-or" onclick="ouvrirModal('Standard — 299€')">Choisir Standard
@@ -2104,6 +2107,7 @@
                     <li>SEO bases intégrées</li>
                     <li>Galerie photo</li>
                     <li>Délai : 3 semaines</li>
+                    <li>4 révisions incluses</li>
                     <li>Support 30 jours</li>
                 </ul>
                 <button class="tarif-btn tarif-btn-clair" onclick="ouvrirModal('Premium — 499€')">Choisir Premium
@@ -2206,8 +2210,8 @@
     <section style="background:var(--creme)" id="avis">
         <div style="text-align:center" class="fade-in">
             <div class="section-eyebrow">Avis clients</div>
-            <h2 class="section-title">Ce que disent<br />nos clients</h2>
-            <p class="section-sub" style="margin:0 auto 3rem">Vrais retours de vrais clients.</p>
+            <h2 class="section-title" id="avisTitle">Ce que disent<br />nos clients</h2>
+            <p class="section-sub" style="margin:0 auto 3rem" id="avisSub">Vrais retours de vrais clients.</p>
         </div>
         <div id="avisGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:3rem"
             class="fade-in"></div>
@@ -2269,7 +2273,7 @@
         <div class="footer-top">
             <div>
                 <div class="footer-logo">Bonkano<span>.</span>création</div>
-                <p class="footer-desc">Agence web père & fils — Création de sites vitrines professionnels pour artisans,
+                <p class="footer-desc">Studio web indépendant — Création de sites vitrines professionnels pour artisans,
                     commerçants et associations.</p>
             </div>
             <div class="footer-col">
@@ -2303,7 +2307,7 @@
         </div>
         <div class="footer-bottom">
             <p>© 2026 Bonkano Création. Tous droits réservés.</p>
-            <span class="legal">⚖️ Contrats signés par le père, responsable légal</span>
+            <span class="legal">⚖️ Contrats signés par un responsable légal</span>
         </div>
     </footer>
 
@@ -2503,9 +2507,14 @@
             if (!grid) return;
             const { data } = await _sb.from('avis').select('*').eq('valide', true).order('created_at', { ascending: false });
             if (!data || data.length === 0) {
-                grid.innerHTML = '<p style="text-align:center;color:var(--gris);grid-column:1/-1">Sois le premier à laisser un avis !</p>';
+                grid.style.display = 'none';
+                const titleEl = document.getElementById('avisTitle');
+                const subEl = document.getElementById('avisSub');
+                if (titleEl) titleEl.innerHTML = 'Soyez parmi<br />nos premiers avis';
+                if (subEl) subEl.textContent = "Nous démarrons tout juste — votre avis sera l'un des premiers publiés.";
                 return;
             }
+            grid.style.display = 'grid';
             grid.innerHTML = data.map((a, i) => `
     <div style="background:white;border:1px solid var(--bordure);border-radius:14px;padding:1.4rem;display:flex;flex-direction:column;gap:.7rem">
       <div style="color:var(--or);font-size:.95rem;letter-spacing:2px">${'★'.repeat(a.note)}${'☆'.repeat(5 - a.note)}</div>
