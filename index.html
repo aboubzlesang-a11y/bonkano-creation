@@ -1583,6 +1583,249 @@
             margin-bottom: 1.5rem
         }
 
+        /* ═══ 10/10 ENHANCEMENTS ═══ */
+        .why-bonkano {
+            background: var(--creme);
+        }
+
+        .why-grid {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            background: #fff;
+            border: 1px solid var(--bordure);
+            border-radius: 22px;
+            padding: 30px;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
+        }
+
+        .why-icon {
+            font-size: 2rem;
+            margin-bottom: 22px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .why-card p {
+            color: var(--gris);
+            line-height: 1.7;
+            font-size: .92rem;
+        }
+
+        .portfolio-start {
+            background: var(--blanc);
+        }
+
+        .portfolio-feature {
+            max-width: 1100px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            overflow: hidden;
+            border: 1px solid var(--bordure);
+            border-radius: 24px;
+            background: white;
+            box-shadow: var(--ombre);
+        }
+
+        .portfolio-image {
+            min-height: 360px;
+            background: linear-gradient(135deg, #18110f, #493022);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .portfolio-placeholder {
+            width: min(420px, 100%);
+            aspect-ratio: 16/10;
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 16px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .03));
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .3);
+        }
+
+        .portfolio-placeholder span {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-placeholder strong {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        .portfolio-placeholder small {
+            opacity: .55;
+            margin-top: 6px;
+        }
+
+        .portfolio-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .portfolio-tag {
+            color: var(--or-fonce);
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: .16em;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-content h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-content p {
+            color: var(--gris);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            background: var(--noir);
+            color: var(--blanc);
+            padding: .85rem 1.4rem;
+            border-radius: 100px;
+            font-weight: 700;
+            transition: .25s;
+        }
+
+        .portfolio-btn:hover {
+            background: var(--or);
+            color: var(--noir);
+            transform: translateY(-2px);
+        }
+
+        .demo-warning {
+            color: var(--gris);
+            font-size: .72rem;
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        .trust-section {
+            background: var(--creme);
+        }
+
+        .trust-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trust-content h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            margin-bottom: 1rem;
+        }
+
+        .trust-content h2 span {
+            color: var(--or-fonce);
+        }
+
+        .trust-content p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: var(--gris);
+            line-height: 1.7;
+        }
+
+        .trust-points {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .trust-points span {
+            background: white;
+            border: 1px solid var(--bordure);
+            padding: .55rem .9rem;
+            border-radius: 100px;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+
+        .tarif-description {
+            color: var(--gris);
+            font-size: .82rem;
+            line-height: 1.5;
+            min-height: 2.5rem;
+        }
+
+        .tarif-card.vedette .tarif-description {
+            color: rgba(248, 246, 241, .5);
+        }
+
+        .cta-note {
+            display: block;
+            color: rgba(248, 246, 241, .35);
+            font-size: .75rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media(max-width:1024px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .portfolio-feature {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:600px) {
+            .why-grid {
+                grid-template-columns: 1fr
+            }
+
+            .portfolio-content {
+                padding: 30px
+            }
+
+            .portfolio-image {
+                min-height: 260px;
+                padding: 24px
+            }
+        }
+
         /* ═══ RESPONSIVE ═══ */
         @media(max-width:1024px) {
             .services-grid {
@@ -1721,6 +1964,7 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#services" onclick="closeMobile()">Services</a>
+        <a href="#pourquoi" onclick="closeMobile()">Pourquoi nous</a>
         <a href="#modeles" onclick="closeMobile()">Modèles</a>
         <a href="#tarifs" onclick="closeMobile()">Tarifs</a>
         <a href="#faq" onclick="closeMobile()">FAQ</a>
@@ -1732,6 +1976,7 @@
         <a class="logo" href="#">Bonkano<span>.</span><sup>création</sup></a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
+            <li><a href="#pourquoi">Pourquoi nous</a></li>
             <li><a href="#modeles">Modèles</a></li>
             <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -1752,12 +1997,13 @@
         <div class="hero-content">
             <div class="hero-eyebrow"><span class="dot"></span>Disponible pour de nouveaux projets</div>
             <h1>
-                Votre site<br />
-                <span class="line-or">vitrine</span><br />
-                <span class="line-outline">en 7 jours</span>
+                Votre activité<br />
+                <span class="line-or">mérite</span><br />
+                <span class="line-outline">d'être visible.</span>
             </h1>
-            <p class="hero-desc">Bonkano Création conçoit des sites vitrines professionnels pour artisans, commerçants
-                et associations — livrés clé en main, responsive et optimisés.</p>
+            <p class="hero-desc">Bonkano Création conçoit des sites vitrines modernes et professionnels pour artisans,
+                commerçants, associations et indépendants. Une présence en ligne claire, rapide et pensée pour vos
+                clients.</p>
             <div class="hero-actions">
                 <button class="btn-or" onclick="ouvrirModal('Standard')">Commencer mon projet →</button>
                 <a class="btn-noir" href="#modeles">Voir les modèles</a>
@@ -1793,14 +2039,14 @@
             <span class="marquee-item">Responsive mobile <span class="sep">✦</span></span>
             <span class="marquee-item">Formulaire contact <span class="sep">✦</span></span>
             <span class="marquee-item">Hébergement gratuit <span class="sep">✦</span></span>
-            <span class="marquee-item">SEO optimisé <span class="sep">✦</span></span>
+            <span class="marquee-item">Bases SEO <span class="sep">✦</span></span>
             <span class="marquee-item">Livraison rapide <span class="sep">✦</span></span>
             <span class="marquee-item">Contrat sécurisé <span class="sep">✦</span></span>
             <span class="marquee-item">Design sur-mesure <span class="sep">✦</span></span>
             <span class="marquee-item">Responsive mobile <span class="sep">✦</span></span>
             <span class="marquee-item">Formulaire contact <span class="sep">✦</span></span>
             <span class="marquee-item">Hébergement gratuit <span class="sep">✦</span></span>
-            <span class="marquee-item">SEO optimisé <span class="sep">✦</span></span>
+            <span class="marquee-item">Bases SEO <span class="sep">✦</span></span>
             <span class="marquee-item">Livraison rapide <span class="sep">✦</span></span>
             <span class="marquee-item">Contrat sécurisé <span class="sep">✦</span></span>
         </div>
@@ -1834,14 +2080,14 @@
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon" style="background:#fef9ec">⚡</div>
-                <h3>Site ultra-rapide</h3>
-                <p>Code propre et optimisé. Votre site charge en moins d'une seconde.</p>
+                <h3>Site léger & rapide</h3>
+                <p>Code propre et optimisé pour une expérience fluide et une navigation agréable.</p>
                 <span class="service-pill">Inclus partout</span>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon" style="background:#fdf4ff">🔍</div>
                 <h3>Bases SEO intégrées</h3>
-                <p>Structure et balises optimisées pour être trouvé sur Google dès le départ.</p>
+                <p>Structure, titres et balises essentielles préparés pour de bonnes bases SEO dès le départ.</p>
                 <span class="service-pill">Premium</span>
             </div>
             <div class="service-card fade-in">
@@ -1849,6 +2095,38 @@
                 <h3>Contrat sécurisé</h3>
                 <p>Tous les contrats sont signés par un responsable légal de l'activité.</p>
                 <span class="service-pill">Inclus partout</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI BONKANO -->
+    <section class="why-bonkano" id="pourquoi">
+        <div class="fade-in">
+            <div class="section-eyebrow">Pourquoi Bonkano ?</div>
+            <h2 class="section-title">Plus qu'un site.<br /><span>Une vraie vitrine.</span></h2>
+            <p class="section-sub">Nous créons des sites pensés pour une chose : permettre à vos clients de comprendre
+                rapidement qui vous êtes et comment vous contacter.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card fade-in">
+                <div class="why-icon">🎨</div>
+                <h3>Design personnalisé</h3>
+                <p>Votre site est adapté à votre activité, votre image et votre clientèle. Pas de site générique.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon">📱</div>
+                <h3>Pensé pour le mobile</h3>
+                <p>Une expérience claire et agréable sur smartphone, tablette et ordinateur.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon">⚡</div>
+                <h3>Léger et rapide</h3>
+                <p>Des sites conçus pour être rapides, simples et agréables à utiliser.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon">🤝</div>
+                <h3>Accompagnement</h3>
+                <p>Nous vous accompagnons de la conception jusqu'à la mise en ligne.</p>
             </div>
         </div>
     </section>
@@ -1977,41 +2255,46 @@
         </div>
     </section>
 
+    <!-- PREMIERE REALISATION -->
+
     <!-- PROCESS -->
     <section style="background:var(--creme)" id="process">
         <div class="process-grid">
             <div class="fade-in">
                 <div class="section-eyebrow">Comment ça marche</div>
-                <h2 class="section-title">De la commande<br />à la mise en ligne</h2>
+                <h2 class="section-title">De votre idée<br />à la mise en ligne</h2>
                 <p class="section-sub">Simple, transparent et rapide.</p>
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-num">1</div>
                         <div class="step-body">
-                            <h3>Vous nous contactez</h3>
-                            <p>Remplissez le formulaire. On vous répond sous 24h avec un devis gratuit.</p>
+                            <h3>On échange</h3>
+                            <p>Vous nous expliquez votre activité et vos besoins. Nous vous répondons sous 24h avec un
+                                devis gratuit.</p>
                         </div>
                     </div>
                     <div class="process-step">
                         <div class="step-num">2</div>
                         <div class="step-body">
-                            <h3>On valide ensemble</h3>
-                            <p>On choisit le style, les couleurs, le contenu. Contrat signé par un responsable légal.
+                            <h3>On conçoit</h3>
+                            <p>On définit le style, les couleurs et le contenu. Les modalités contractuelles sont
+                                encadrées par notre responsable légal.
                             </p>
                         </div>
                     </div>
                     <div class="process-step">
                         <div class="step-num">3</div>
                         <div class="step-body">
-                            <h3>On crée votre site</h3>
-                            <p>On code votre site à la main en 1 à 3 semaines selon la formule.</p>
+                            <h3>Vous validez</h3>
+                            <p>Nous créons votre site et vous présentons une première version pour validation.</p>
                         </div>
                     </div>
                     <div class="process-step">
                         <div class="step-num">4</div>
                         <div class="step-body">
-                            <h3>Livraison & mise en ligne</h3>
-                            <p>Votre site est en ligne. On reste disponibles pour toute correction incluse.</p>
+                            <h3>Mise en ligne</h3>
+                            <p>Votre site est publié et nous restons disponibles pour les corrections incluses dans
+                                votre formule.</p>
                         </div>
                     </div>
                 </div>
@@ -2068,6 +2351,7 @@
                 <div class="tarif-nom">Basique</div>
                 <div class="tarif-prix"><sup>€</sup>149</div>
                 <div class="tarif-periode">Site une seule page</div>
+                <div class="tarif-description">Une présence professionnelle simple.</div>
                 <ul class="tarif-features">
                     <li>Design sur-mesure</li>
                     <li>Responsive mobile</li>
@@ -2084,6 +2368,7 @@
                 <div class="tarif-nom">Standard</div>
                 <div class="tarif-prix"><sup>€</sup>299</div>
                 <div class="tarif-periode">Jusqu'à 5 pages</div>
+                <div class="tarif-description">Le site complet pour présenter votre activité.</div>
                 <ul class="tarif-features">
                     <li>Tout le Basique</li>
                     <li>Jusqu'à 5 pages</li>
@@ -2100,9 +2385,10 @@
                 <div class="tarif-nom">Premium</div>
                 <div class="tarif-prix"><sup>€</sup>499</div>
                 <div class="tarif-periode">Site complet & optimisé</div>
+                <div class="tarif-description">Une présence web plus poussée et personnalisée.</div>
                 <ul class="tarif-features">
                     <li>Tout le Standard</li>
-                    <li>Pages illimitées</li>
+                    <li>Jusqu'à 8 pages</li>
                     <li>Animations avancées</li>
                     <li>SEO bases intégrées</li>
                     <li>Galerie photo</li>
@@ -2209,9 +2495,10 @@
     <!-- AVIS CLIENTS -->
     <section style="background:var(--creme)" id="avis">
         <div style="text-align:center" class="fade-in">
-            <div class="section-eyebrow">Avis clients</div>
-            <h2 class="section-title" id="avisTitle">Ce que disent<br />nos clients</h2>
-            <p class="section-sub" style="margin:0 auto 3rem" id="avisSub">Vrais retours de vrais clients.</p>
+            <div class="section-eyebrow">Preuve sociale</div>
+            <h2 class="section-title" id="avisTitle">Soyez parmi<br />nos premiers avis</h2>
+            <p class="section-sub" style="margin:0 auto 3rem" id="avisSub">Nous construisons notre portfolio — les
+                premiers clients pourront partager leur expérience.</p>
         </div>
         <div id="avisGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:3rem"
             class="fade-in"></div>
@@ -2257,15 +2544,28 @@
         </div>
     </section>
 
+    <!-- COLLABORATION ENCADREE -->
+    <section class="trust-section">
+        <div class="trust-content fade-in">
+            <span class="section-eyebrow">Un projet encadré</span>
+            <h2>Un accompagnement<br /><span>simple et transparent.</span></h2>
+            <p>Bonkano Création est un projet accompagné par un responsable légal. Les aspects contractuels et
+                administratifs sont gérés dans le cadre prévu pour notre activité.</p>
+            <div class="trust-points"><span>✓ Devis clair</span><span>✓ Pas de frais cachés annoncés</span><span>✓ Suivi
+                    du projet</span></div>
+        </div>
+    </section>
+
     <!-- CTA FINAL -->
     <section class="cta" id="contact">
         <div class="cta-or-line"></div>
-        <h2>Prêt à avoir<br />votre <span>site</span> ?</h2>
-        <p>Contactez-nous aujourd'hui, on vous répond sous 24h avec un devis gratuit et sans engagement.</p>
+        <h2>Votre projet<br />commence <span>ici.</span></h2>
+        <p>Vous avez une entreprise, une association ou un projet qui mérite d'être visible en ligne ? Parlons-en.</p>
         <div class="cta-btns">
             <button class="btn-or" onclick="ouvrirModal('Devis gratuit')">📋 Demander un devis</button>
             <a class="btn-contour" href="mailto:webduocontact@gmail.com">📧 Nous écrire</a>
         </div>
+        <small class="cta-note">Réponse sous 24h ouvrées · Sans engagement</small>
     </section>
 
     <!-- FOOTER -->
